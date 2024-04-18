@@ -9,39 +9,19 @@ class Lista:
         """Metodo constructur de lista"""
         self.__caja=[]
 
-    def agregar(self,uncaja):
+    def agregar(self,unacaja):
         """Metodo para agregar cajas a la lista"""
-        self.__caja.append(uncaja)
+        self.__caja.append(unacaja)
 
     def test(self):
-        #Esta forma de instanciar esta mal, lo mejor seria trabajarlo con arreglos Numpy(aun no los he visto)
-        # o combinando listas con diccionarios simulando un arreglo de registros(tengo entendido que no
-        # trabajamos con diccionarios en este curso)
         """Metodo para instanciar caja de ahorro"""
-        nc1=input('Ingresa el numero de cuenta de caja 1:' )
-        c1=input('Ingresa su CUIL:' )
-        a1=input("Ingresa su apellido: ")
-        n1=input("Ingresa su nombre: ")
-        s1=float(input("Ingresa saldo: "))
-        caja1= CajaDeAhorro(nc1,c1,a1,n1,s1)
-
-        nc2=input('Ingresa el numero de cuenta de caja 2:' )
-        c2=input('Ingresa su CUIL:' )
-        a2=input("Ingresa su apellido: ")
-        n2=input("Ingresa su nombre: ")
-        s2=float(input("Ingresa saldo: "))
-        caja2= CajaDeAhorro(nc2,c2,a2,n2,s2)
-
-        nc3=input('Ingresa el numero de cuenta de caja 3:' )
-        c3=input('Ingresa su CUIL:' )
-        a3=input("Ingresa su apellido: ")
-        n3=input("Ingresa su nombre: ")
-        s3=float(input("Ingresa saldo: "))
-        caja3= CajaDeAhorro(nc3,c3,a3,n3,s3)
-
-        self.agregar(caja1)
-        self.agregar(caja2)
-        self.agregar(caja3)
+        for i in range(3):
+            nc=input(f"Ingresa el numero de cuenta de la caja {i+1}: ")
+            c= input("Ingresa su CUIL: ")
+            a= input("Ingresa el nombre: ")
+            n= input("Ingresa el apellido: ")
+            s= float(input("Ingresa el saldo: "))
+            self.agregar(CajaDeAhorro(nc,c,a,n,s))
 
     def mostrar_lista(self):
         """Metodo para mostrar_lista datos"""
@@ -91,4 +71,4 @@ Pablo
 Rodriguez
 Juan
 1500
-"""        
+"""

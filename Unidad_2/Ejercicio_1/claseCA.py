@@ -57,12 +57,13 @@ class CajaDeAhorro:
             acum+=i
         p1=acum//11
         p2=acum-(p1*11)
-        print(lista,"-----" ,acum,"---",p2)
         if p2==0:
             if self.__cuil[12]!='0':
                 print('CUIL erroneo. El digito de verificacion deberia ser 0')
+                return False
             else:
                 print('El CUIL es valido')
+                return True
         #Este bloque detecta CUILs cuyos digitos XY deberian ser 23, pues son repetidos
         elif p2==1:
             if self.__cuil[0:2]=='20':
@@ -70,27 +71,32 @@ class CajaDeAhorro:
                     print('CUIL invalido. Los digitos XY deberian tomar el valor 23, y Z el 9')
                 else:
                     print('CUIL invalido. Los digitos XY deberian tomar el valor 23')
+                return False
             elif self.__cuil[0:2]=='27':
                 if self.__cuil[12]!='4':
                     print('CUIL invalido. Los digitos XY deberian tomar el valor 23, y Z el 4')
                 else:
                     print('CUIL invalido. Los digitos XY deberian tomar el valor 23')
+                return False
         else:
             band=False
             valido=('4','9')
             if self.__cuil[0:2]=='23':
                 if (self.__cuil[12] in valido)is False:
                     print('CUIL invalido. Su digito de verificacion deberia ser 4 o 9')
+                    return False
                 else:
                     band=True
             else:
                 z=11-p2
                 if int(self.__cuil[12])!=z:
                     print('CUIL invalido. Z deberia tomar el valor ',z)
+                    return False
                 else:
                     band=True
             if band is True:
                 print('CUIL valido')
+                return True
 def principal():
     """Main del Programa"""
     print("hOKDLBFDSJNFV")
