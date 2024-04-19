@@ -14,8 +14,7 @@ class GestorVentas:
             print("--------------------------------------------------------")
             print(f"° Carga de Ventas para la sucursal {i+1}")
             for j in range(7):
-                imp=float(input(f"Ingresa el importe para el dia {j+1}: "))
-                self.__arreglo[i][j]= imp
+                self.__arreglo[i][j]= float(input(f"Ingresa el importe para el dia {j+1}: "))
 
     def opcion1(self,dia,num,imp):
         """Metodo para la opcion 1"""
@@ -97,7 +96,7 @@ def principal():
 if __name__=='__main__':
     principal()
 
-"""Lote de prueba. Recomiendo copiar y al ejecutar pegarlo
+"""Lote de prueba. (copiar todo y al ejecutar pegarlo)
 250
 650.5
 130
@@ -132,4 +131,5 @@ if __name__=='__main__':
 270.5
 3000
 120
+500
 """
