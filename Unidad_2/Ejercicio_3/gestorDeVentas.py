@@ -1,4 +1,4 @@
-"""Clase Gestora de Ventas"""
+"""Ejercicio 3 / Unidad 2 - Ary Toro"""
 import numpy as np
 
 class GestorVentas:
