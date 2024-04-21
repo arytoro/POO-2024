@@ -25,9 +25,9 @@ class GestorDePedido:
 
     def ordenar(self):
         """Metodo para ordenar la lista de pedidos en orden ascendente en base a patente"""
-        print(self.__listaPedidos) #Antes de ordenar
+        #print(self.__listaPedidos) #Antes de ordenar
         self.__listaPedidos=sorted(self.__listaPedidos)
-        print(self.__listaPedidos) #Despues de ordenar
+        #print(self.__listaPedidos) #Despues de ordenar
 
     def nuevoPedido(self,patentes):
         """Metodo que agrega un nuevo pedido"""
