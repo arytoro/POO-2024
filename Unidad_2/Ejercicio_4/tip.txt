@@ -1,2 +1,2 @@
-Si al usar la funcion open no te lo toma el archivo csv; te sugiero que
-copies los archivos csv en el escritorio.
+Si al usar la funcion open no te lo toma el archivo csv; probá si te funciona
+copiando los archivos csv en el escritorio.
