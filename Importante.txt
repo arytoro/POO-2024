@@ -1,0 +1,5 @@
+Hay que hacer correcciones en los ejercicios que
+subí. 
+No estaba al tanto de que el main/interfaz se
+debe hacer en un archivo distinto al de los gestores.
+Cuando lo corrija borraré esta nota.
