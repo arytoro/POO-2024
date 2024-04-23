@@ -58,22 +58,6 @@ class GestorDeEquipo:
             self.__equipos[indiceLocal].updatePostFecha(unafecha[1],unafecha[3])
             self.__equipos[indiceVistante].updatePostFecha(unafecha[3],unafecha[1])
 
-    def mostrarTablaEquipos(self):
-        """Muestra y la tabla de equipos ordenada"""
-        print("        ID      Nombre           Datos")
-        for unequipo in self.__equipos:
-            ide=unequipo.getID_Equipo()
-            nom=unequipo.getNombre_Equipo()
-            gf=unequipo.getGolesF_Equipo()
-            gc=unequipo.getGolesC_Equipo()
-            df=unequipo.getDifGoles_Equipo()
-            pun=unequipo.getPuntos_Equipo()
-            print(f"        {ide}     {nom}     GF:{gf}    GC:{gc}    DG:{df}    Puntos:{pun}")
-
-    def ordenar(self):
-        """Metodo que ordena la tabla de posiciones y retorna la lista ordenada"""
-        self.__equipos=sorted(self.__equipos,reverse=True)
-
     def getPosicionesEquipos(self):
         """Metodo que retorna una lista con los datos de los equipos en orden actual"""
         lista=[]
@@ -88,6 +72,23 @@ class GestorDeEquipo:
             lista.append(equipoX)
         return lista
 
+    def mostrarTablaEquipos(self):
+        """Muestra la tabla de equipos"""
+        tabla=self.getPosicionesEquipos()
+        print("        ID      Nombre           Datos")
+        for unequipo in tabla:
+            ide=unequipo[0]
+            nom=unequipo[1]
+            gf=unequipo[2]
+            gc=unequipo[3]
+            df=unequipo[4]
+            pun=unequipo[5]
+            print(f"        {ide}     {nom}     GF:{gf}    GC:{gc}    DG:{df}    Puntos:{pun}")
+
+    def ordenar(self):
+        """Metodo que ordena la tabla de posiciones"""
+        self.__equipos=sorted(self.__equipos,reverse=True)
+
     def guardarCSV(self):
         """Metodo que guarda la tabla de posiciones ordenada en un archivo csv"""
         posiciones=self.getPosicionesEquipos()
@@ -101,5 +102,4 @@ class GestorDeEquipo:
     def eliminarEquipo(self,idE):
         """Ejecuta el destructor de un equipo"""
         indice=self.getIndice(idE)
-        print(indice)
         del self.__equipos[indice]
