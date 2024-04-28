@@ -1,4 +1,4 @@
-"""Ejercicio 4 / Unidad 2 - Ary Toro. Al ejecutar, se deben de llevar a cabo las opciones 1 y 2 antes que el resto"""
+"""Ejercicio 4 / Unidad 2 - Ary Toro""
 import csv
 from clasePedido import Pedido
 from GestorMotos import GestorDeMotos
