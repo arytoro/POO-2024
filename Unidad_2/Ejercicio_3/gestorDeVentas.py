@@ -6,7 +6,7 @@ class GestorVentas:
     __arreglo: np.ndarray
 
     def __init__(self):
-        self.__arreglo= np.empty([5,7],dtype=float)
+        self.__arreglo= np.zeros([5,7],dtype=float) #Genero una matriz de 0s con 5 filas y 7 columnas que guardara reales
 
     def test(self):
         """Metodo para la instanciacion"""
@@ -39,12 +39,14 @@ class GestorVentas:
 
     def opcion4(self):
         """Metodo para la opcion 4"""
-        min=9999999999999
+        minR=9999999999999
         for i in range(5):
+            acum=0
             for j in range(7):
-                if self.__arreglo[i][j]<min:
-                    min=self.__arreglo[i][j]
-                    auxMin=i+1
+                acum+=self.__arreglo[i][j]
+            if acum<minR:
+                minR=acum
+                auxMin=i+1
         print("La sucursal con menos facturacion durante la semana fue la ",auxMin)
 
     def opcion5(self):
@@ -54,82 +56,3 @@ class GestorVentas:
             for j in range(7):
                 acum+=self.__arreglo[i][j]
         print("El total acumulado por todas las sucursales durante la semana es ",acum)
-
-def menu():
-    """Menu de opciones"""
-    op=int(input("""
-                                 MENÚ DE OPCIONES
-          [1] Ingresa dia, numero e importe. Acumular para ese dia y sucursal
-          [2] Ingresa sucursal. Calcular su total de facturacion
-          [3] Ingresa dia. Mostrar sucursal que mas facturó ese dia
-          [4] Calcular sucursal con menos facturacion durante la semana
-          [5] Calcular el total facturado por todas las sucursales
-          [0] SALIR
-          -> """))
-    return op
-
-def principal():
-    """Main del Programa"""
-    arreglo_ventas=GestorVentas()
-    arreglo_ventas.test()
-    opcion=menu()
-    while opcion!=0:
-        if opcion==1:
-            d1=int(input("Ingresa el dia(1 a 7): "))
-            n1=int(input("Ingresa la sucursal(1 a 5): "))
-            i1=float(input("Ingresa el importe: "))
-            arreglo_ventas.opcion1(d1,n1,i1)
-        elif opcion==2:
-            n2=int(input("Ingresa numero de sucursal: "))
-            arreglo_ventas.opcion2(n2)
-        elif opcion==3:
-            d3=int(input("Ingresa el dia: "))
-            arreglo_ventas.opcion3(d3)
-        elif opcion==4:
-            arreglo_ventas.opcion4()
-        elif opcion==5:
-            arreglo_ventas.opcion5()
-        else:
-            print("Opcion no valida")
-        opcion=menu()
-
-if __name__=='__main__':
-    principal()
-
-"""Lote de prueba. (copiar todo y al ejecutar pegarlo)
-250
-650.5
-130
-0
-210
-100
-810
-330
-410
-110
-50.6
-710
-301
-800.9
-231
-74
-23
-600
-310
-1000
-1300
-340
-610
-140.3
-781
-620
-630
-110
-670
-210
-630
-270.5
-3000
-120
-500
-"""
