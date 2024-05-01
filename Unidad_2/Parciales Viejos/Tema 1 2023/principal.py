@@ -7,13 +7,12 @@ def menu():
                             Menú de Opciones
                 [1] Ingresa estilo y edad. Mostrar datos en funcion del estilo
                 [2] Mostrar datos del patinador con mejor puntaje
-                [3] Listar patinadores por estilo (tendría que ser para quienes cumplen ambos estilos)
+                [3] Listar patinadores que tienen ambos estilos
                 [4] Ingresa DNI y estilo para ver las 3 valoraciones
                 [0] Salir
                  -> """))
     return op
- #El item 3 no cumple lo que pide, la idea era que muestre los que tienes ambos estilos. Yo lo codifique
- # para que solo tenga un estilo.
+
 if __name__=='__main__':
     opcion:int
     GF= GestorDeFederados()
