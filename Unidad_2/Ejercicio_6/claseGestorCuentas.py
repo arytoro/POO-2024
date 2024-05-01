@@ -4,14 +4,25 @@ import csv
 from claseCuenta import Cuenta
 class GestorCuentas:
     """Clase del gestor de cuentas"""
+    __cantidad:int
+    __dimension:int
+    __incremento:int
     __cuentas: np.ndarray
     def __init__(self):
         """Metodo constructor del gestor de ventas"""
-        self.__cuentas=np.empty([0],dtype=Cuenta)
+        self.__cantidad=0
+        self.__dimension=0
+        self.__incremento=5
+        self.__cuentas=np.empty(self.__dimension,dtype=Cuenta)
 
     def agregarCuenta(self,unacuenta):
         """Metodo para agregar una cuenta al arreglo de cuentas"""
-        self.__cuentas=np.append(self.__cuentas,unacuenta)
+        if self.__cantidad == self.__dimension:
+            print("Se solicito espacio")
+            self.__dimension += self.__incremento
+            self.__cuentas.resize(self.__dimension)
+        self.__cuentas[self.__cantidad]=unacuenta
+        self.__cantidad+=1
 
     def test(self):
         """Metodo para leer cuentas desde archivo"""
@@ -23,11 +34,12 @@ class GestorCuentas:
                 band=not band
             else:
                 self.agregarCuenta(Cuenta(fila[0],fila[1],int(fila[2]),int(fila[3]),float(fila[4]),int(fila[5])))
+        #self.__cuentas.resize(self.__cantidad) #Saca las posiciones que quedaron vacias
         archivo.close()
 
     def getCVUporDNI(self,dni):
         """Metodo que retorna el CVU de una cuenta a partir del DNI del propietario"""
-        long= self.__cuentas.size
+        long= self.__cantidad
         i=0
         band=False
         while band is False and i<long:
@@ -44,7 +56,7 @@ class GestorCuentas:
     def actualizarPostTransacciones(self,cvu,monto):
         """Actualiza el saldo de la cuenta despues de realizarse las transacciones"""
         i=0
-        long=self.__cuentas.size
+        long=self.__cantidad
         band=False
         while band is False and i<long:
             if cvu==self.__cuentas[i].getCVU():
@@ -57,7 +69,7 @@ class GestorCuentas:
     def mostrarDatosParaCVU(self,cvu):
         """Muestra los datos de la cuenta con el cvu ingresado"""
         i=0
-        long=self.__cuentas.size
+        long=self.__cantidad
         band=False
         while band is False and i<long:
             if cvu==self.__cuentas[i].getCVU():
@@ -78,14 +90,14 @@ class GestorCuentas:
 
     def actualizarPostIncremento(self,porcentaje):
         """Metodo que actualiza el saldo de todas las cuentas con el incremento diario"""
-        for unacuenta in self.__cuentas:
-            unacuenta.actualizarSaldo_Incremento(porcentaje)
-            unacuenta.mostrarDatos()
+        for i in range(self.__cantidad):
+            self.__cuentas[i].actualizarSaldo_Incremento(porcentaje)
+            self.__cuentas[i].mostrarDatos()
         print("Se actualizaron los saldos de las cuentas! Se recuerda que el incremento diario es %",porcentaje)
 
     def getSaldoPorCVU(self,cvu):
         """Metodo que retorna el saldo actual de una cuenta con dicho CVU"""
-        long= self.__cuentas.size
+        long= self.__cantidad
         i=0
         band=False
         while band is False and i<long:
@@ -102,8 +114,9 @@ class GestorCuentas:
     def getLista_DatosCuentas(self):
         """Metodo que retorna una lista con los datos de las cuentas a actualizar"""
         lista=[]
-        for unacuenta in self.__cuentas:
-            lista.append(unacuenta.getAllDatos())
+        print(self.__cuentas.size)
+        for i in range(self.__cantidad):
+            lista.append(self.__cuentas[i].getAllDatos())
         return lista #Es una lista de tuplas, cada tupla contiene los datos de una cuenta
 
     def guardarCSV(self):
