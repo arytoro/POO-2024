@@ -50,16 +50,14 @@ class GestorDePuntajes:
 
     def listarPatinadoresPorEstilo(self,GF):
         xdni:int
-        print("Patinadores con Estilo Libre ")
+        print("Patinadores con Estilo Libre y Estilo Escuela: ")
         for unpuntaje in self.__lista_puntajes:
             if unpuntaje.getEstilo()=="L":
                 xdni=unpuntaje.getDNI()
-                GF.mostrarTodosLosDatos_porDNI(xdni)
-        print("Patinadores con Estilo Escuela ")
-        for unpuntaje in self.__lista_puntajes:
-            if unpuntaje.getEstilo()=="E":
-                xdni=unpuntaje.getDNI()
-                GF.mostrarTodosLosDatos_porDNI(xdni)
+            for otropuntaje in self.__lista_puntajes:
+                if otropuntaje.getEstilo()=='E' and otropuntaje.getDNI()==xdni:
+                    GF.mostrarTodosLosDatos_porDNI(xdni)
+
         
     def mostrarValoraciones(self):
         xdni:int
