@@ -1,0 +1,22 @@
+numCuenta;fecha;descripcion;tipoMovto;importe
+300;1/4/2024;Pago parcial;P;11000
+305;1/4/2024;Compra Perfumeria;C;33000
+309;1/4/2024;Compra Remedios;C;22600
+301;1/4/2024;Pago parcial;P;32000
+304;1/4/2024;Compra Perfumeria;C;67850
+310;1/4/2024;Compra Regaleria;C;19500
+299;1/4/2024;Pago parcial;P;14000
+300;2/4/2024;Compra Remedios;C;33000
+305;3/4/2024;Compra Perfumeria;C;31500
+309;3/4/2024;Compra Perfumeria;C;18900
+301;3/4/2024;Compra Remedios;C;34880
+304;11/4/2024;Pago parcial;P;40000
+299;11/4/2024;Compra Remedios;C;57000
+310;11/4/2024;Pago parcial;P;10000
+299;12/4/2024;Compra Perfumeria;C;39560
+310;13/4/2024;Compra Remedios;C;31500
+309;13/4/2024;Compra Regaleria;C;14900
+299;13/4/2024;Compra en Remedios;C;31005
+305;14/4/2024;Compra Perfumeria;C;65800
+310;20/4/2024;Pago parcial;P;4840
+305;20/4/2024;Compra Remedios;C;33100
