@@ -30,6 +30,8 @@ if __name__=='__main__':
                 GL.mostrarDatosMateriales(idOp1)
             except ValueError:
                 print("Entrada invalida. Se esperaba un entero")
+            except AssertionError:
+                print("Error. El ID ingresado no pertence a un ladrillo")
         elif opcion==2:
             GL.mostrarCostosTotalDeFabricacion()
         elif opcion==3:

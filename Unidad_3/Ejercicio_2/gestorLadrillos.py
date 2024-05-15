@@ -41,8 +41,7 @@ class GestorDeLadrillos:
                 band=True
             else:
                 i+=1
-        if band is False:
-            print("No existe un ladrillo con ese ID")
+        assert band is True
 
     def mostrarCostosTotalDeFabricacion(self):
         for unladrillo in self.__listaLadrillos:
