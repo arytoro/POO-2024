@@ -35,7 +35,7 @@ class GestorDeEdificios:
                 band=True
             else:
                 i+=1
-        return band
+        assert band is True
 
     def mostrarSuperficieTotalEdificio(self,xid):
         band = False
@@ -46,7 +46,7 @@ class GestorDeEdificios:
                 band=True
             else:
                 i+=1
-        return band
+        assert band is True
 
     def mostrarSuperficieTotalDepartamento(self,xnom):
         band=False
@@ -56,7 +56,7 @@ class GestorDeEdificios:
                 print(f"La superficie total de dichos deptos es {unedificio.getSuperficieDeptosPropietario(xnom)}")
                 print(f"Que representa el %{round((unedificio.getSuperficieDeptosPropietario(xnom)*100)/unedificio.getSuperficieTotal(),2)} de la superficie total del edificio\n")
                 band=True
-        return band
+        assert band is True
 
     def mostrarDepartamentosConCondiciones(self,xnumP):
         band= False
@@ -65,5 +65,4 @@ class GestorDeEdificios:
                 cantidad=unedificio.listarDepartamentosConCondiciones(xnumP)
                 print(f"\nPor lo tanto {cantidad} departamentos cumplen esas condiciones en el edificio {unedificio.getIdEdificio()}\n")
                 band=True
-        return band
-                
+        assert band is True
