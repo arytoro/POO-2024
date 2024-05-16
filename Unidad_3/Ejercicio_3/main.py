@@ -23,7 +23,7 @@ if __name__=='__main__':
     GM=GestorMatriculas()
     GE.cargarEmpleados()
     GP.cargarProgramas()
-    GE.asignarMatriculaciones(GP,GM) #Las direcciones de memorias que quedaron
+    GE.asignarMatriculaciones(GP,GM)
     print("----Lista de Matriculas----")
     GM.listarMatriculas()
     opcion=menu()
@@ -48,7 +48,7 @@ if __name__=='__main__':
             except ValueError:
                 print("Todos los empleados se encuentran matriculados a programas")
         elif opcion==4:
-            GM.borrarMatriculaPorIndice(2) #Le puse 2 para probar si
+            GM.borrarMatriculaPorIndice(2)
             GM.listarDireccionesMatriculas()
             GM.listarMatriculas()
         else:
