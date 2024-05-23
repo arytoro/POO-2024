@@ -61,8 +61,8 @@ class Lista:
             elif isinstance(aux.getDato(),AudioLibro):
                 cont2+=1
             aux=aux.getSiguiente()
-        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Tal cual los muestro en la funcion de abajo
         print(f"Hay {cont1} publicaciones de libro impreso. Y {cont2} de audio-libro")
+        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Tal cual lo muestro en el metodo de abajo
 
     def mostrarPublicaciones(self):        
         for unapublicacion in self:
