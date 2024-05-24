@@ -37,7 +37,7 @@ if __name__=="__main__":
 
                     if tipoOp1 == 1:
                         nomAutorOp1=input('Nombre de Autor: ')
-                        fechaEdiOp1=input('Fecha de Edicion: ')
+                        fechaEdiOp1=input('Fecha de Edicion (dd/mm/yyyy): ')
                         cpOp1=int(input('Cantidad de Paginas: '))
                         nuevaPubicacion=LibroImpreso(tit=titOp1,cate=cateOp1,precioB=pbOp1,nomAutor=nomAutorOp1,fechaEdi=fechaEdiOp1,cantPag=cpOp1)
                     else:
