@@ -1,4 +1,5 @@
 """Ejercicio 4 / Unidad 3 - Ary Toro"""
+import csv
 from claseNodo import Nodo
 from claseAudioLibro import AudioLibro
 from claseLibroImpreso import LibroImpreso
@@ -31,6 +32,27 @@ class Lista:
     def __getTope(self):
         return self.__tope
 
+    def cargarPublicaciones(self):
+        band1= False
+        band2= False
+        archivo1=open("libros.csv")
+        reader1=csv.reader(archivo1,delimiter=";")
+        for fila1 in reader1:
+            if band1 is False:
+                band1=True
+            else:
+                self.agregarPublicacion(LibroImpreso(tit=fila1[0],cate=fila1[1],precioB=float(fila1[2]),nomAutor=fila1[3],fechaEdi=fila1[4],cantPag=int(fila1[5])))
+        archivo1.close()
+
+        archivo2=open("cd.csv")
+        reader2=csv.reader(archivo2,delimiter=";")
+        for fila2 in reader2:
+            if band2 is False:
+                band2=True
+            else:
+                self.agregarPublicacion(AudioLibro(tit=fila2[0],cate=fila2[1],precioB=float(fila2[2]),tiempoRep=int(fila2[3]),nomNarra=fila2[4]))
+        archivo2.close()
+
     def agregarPublicacion(self,publicacion):
         nodo= Nodo(publicacion)
         nodo.setSiguiente(self.__comienzo)
@@ -61,8 +83,8 @@ class Lista:
             elif isinstance(aux.getDato(),AudioLibro):
                 cont2+=1
             aux=aux.getSiguiente()
+        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Tal cual los muestro en la funcion de abajo
         print(f"Hay {cont1} publicaciones de libro impreso. Y {cont2} de audio-libro")
-        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Tal cual lo muestro en el metodo de abajo
 
     def mostrarPublicaciones(self):        
         for unapublicacion in self:
@@ -74,3 +96,9 @@ class Lista:
                 importe=precioBase + (10*precioBase)/100
 
             print(f'°Titulo: {unapublicacion.getTitulo()}\n Categoria: {unapublicacion.getCategoria()}\n Importe de Venta: {round(importe,2)}\n')
+
+    def listarPublicacionesConIndice(self):
+        indice=0
+        for unapublicacion in self:
+            print(indice," - ",unapublicacion.getTitulo())
+            indice+=1
