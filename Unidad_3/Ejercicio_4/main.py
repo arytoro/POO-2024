@@ -27,7 +27,7 @@ if __name__=="__main__":
             try:
                 tipoOp1=int(input('Tipo: [1] Libro Impreso [2] Audio-Libro [0] Cancelar\n -> '))
 
-                while (tipoOp1 in (1,2,0)) is False: #Si la opcion no es 1, 2 o 0. Que itere hasta que sea una de la dos
+                while (tipoOp1 in (1,2,0)) is False: #Si la opcion no es 1, 2 o 0. Que itere hasta que sea una de las tres
                     tipoOp1=int(input('Tipo invalido. [1] Libro Impreso [2] Audio-Libro [0] Cancelar\n -> '))
 
                 if tipoOp1!= 0:
