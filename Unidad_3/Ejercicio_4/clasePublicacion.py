@@ -1,5 +1,8 @@
 """Ejercicio 4 / Unidad 3 - Ary Toro"""
-class Publicacion:
+import abc
+from abc import ABC
+
+class Publicacion(ABC):
     __titulo:str
     __categoria:str
     __precioBase:float
@@ -17,3 +20,7 @@ class Publicacion:
 
     def getPrecioBase(self):
         return self.__precioBase
+
+    @abc.abstractmethod
+    def getImporteVenta(self):
+        pass

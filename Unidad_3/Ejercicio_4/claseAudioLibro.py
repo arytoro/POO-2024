@@ -15,5 +15,9 @@ class AudioLibro(Publicacion):
     def getNomNarrador(self):
         return self.__nomNarrador
 
+    def getImporteVenta(self):
+        importe= self.getPrecioBase() + (10*self.getPrecioBase())/100
+        return importe
+
     def __str__(self):
         return f'Titulo: {super().getTitulo()}\n Tiempo de Reproduccion {self.getTiempoRep()}'

@@ -20,5 +20,10 @@ class LibroImpreso(Publicacion):
     def getCantPaginas(self):
         return self.__cantPaginas
 
+    def getImporteVenta(self):
+        anio=int(self.getFechaEdicion()[6:10]) #De la posicion 6 a 10 estan los numeros que corresponden al año
+        importe=self.getPrecioBase() - ((2024-anio)*self.getPrecioBase())/100
+        return importe
+
     def __str__(self):
         return f'Titulo: {super().getTitulo()}\n Nombre de Autor {self.getNomAutor()}'

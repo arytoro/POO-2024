@@ -88,13 +88,7 @@ class Lista:
 
     def mostrarPublicaciones(self):        
         for unapublicacion in self:
-            precioBase= unapublicacion.getPrecioBase()
-            if isinstance(unapublicacion,LibroImpreso):
-                anio=unapublicacion.getFechaEdicion()[6:10] #De la posicion 6 a 10 estan los numeros que corresponden al año
-                importe= precioBase - ((2024-int(anio))*precioBase)/100
-            elif isinstance(unapublicacion,AudioLibro):
-                importe=precioBase + (10*precioBase)/100
-
+            importe=unapublicacion.getImporteVenta()
             print(f'°Titulo: {unapublicacion.getTitulo()}\n Categoria: {unapublicacion.getCategoria()}\n Importe de Venta: {round(importe,2)}\n')
 
     def listarPublicacionesConIndice(self):
