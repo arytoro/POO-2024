@@ -62,7 +62,7 @@ class Lista:
         print("Cargado Exitosamente!")
 
     def getTipoPublicacion(self,pos):
-        if pos<= self.__getTope()-1: #El tope tiene la cantidad de nodos en la lista
+        if pos < self.__getTope(): #El tope tiene la cantidad de nodos en la lista
             aux=self.__comienzo
             for i in range(pos):
                 aux=aux.getSiguiente()
@@ -83,8 +83,8 @@ class Lista:
             elif isinstance(aux.getDato(),AudioLibro):
                 cont2+=1
             aux=aux.getSiguiente()
-        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Tal cual los muestro en la funcion de abajo
         print(f"Hay {cont1} publicaciones de libro impreso. Y {cont2} de audio-libro")
+        #Ya que la lista esta codificada como un iterador, tambien se podria recorrer con un for. Eso hice en el método de abajo.
 
     def mostrarPublicaciones(self):        
         for unapublicacion in self:
