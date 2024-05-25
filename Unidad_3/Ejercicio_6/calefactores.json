@@ -1,0 +1,99 @@
+{
+    "__class__": "Lista",
+    "calefactores": [
+        {
+            "__class__": "CalefactorElectrico",
+            "__atributos__": {
+                "Marca": "Whirlpool",
+                "Modelo": "ary-101",
+                "PaisF": "Argentina",
+                "Precio": 2400.0,
+                "FPago": "cuotas",
+                "CCuotas": 6,
+                "Promo": "si",
+                "PotenciaM": 1200
+            }
+        },
+        {
+            "__class__": "CalefactorElectrico",
+            "__atributos__": {
+                "Marca": "Frigidaire",
+                "Modelo": "cat-999",
+                "PaisF": "China",
+                "Precio": 4900.0,
+                "FPago": "contado",
+                "CCuotas": 1,
+                "Promo": "no",
+                "PotenciaM": 500
+            }
+        },
+        {
+            "__class__": "CalefactorGas",
+            "__atributos__": {
+                "Marca": "Frigidaire",
+                "Modelo": "srk-561",
+                "PaisF": "Escocia",
+                "Precio": 5000.0,
+                "FPago": "cuotas",
+                "CCuotas": 12,
+                "Promo": "si",
+                "Matricula": "RK23-7182-02-13",
+                "Calorias": 3500
+            }
+        },
+        {
+            "__class__": "CalefactorElectrico",
+            "__atributos__": {
+                "Marca": "Ginova",
+                "Modelo": "abc-462",
+                "PaisF": "Rusia",
+                "Precio": 1750.0,
+                "FPago": "contado",
+                "CCuotas": 1,
+                "Promo": "si",
+                "PotenciaM": 1500
+            }
+        },
+        {
+            "__class__": "CalefactorGas",
+            "__atributos__": {
+                "Marca": "LG",
+                "Modelo": "uik-279",
+                "PaisF": "Argelia",
+                "Precio": 1000.0,
+                "FPago": "contado",
+                "CCuotas": 1,
+                "Promo": "si",
+                "Matricula": "HY-2902-12-56",
+                "Calorias": 2000
+            }
+        },
+        {
+            "__class__": "CalefactorElectrico",
+            "__atributos__": {
+                "Marca": "Frigidaire",
+                "Modelo": "xyz-192",
+                "PaisF": "Uruguay",
+                "Precio": 2600.0,
+                "FPago": "contado",
+                "CCuotas": 1,
+                "Promo": "no",
+                "PotenciaM": 900
+            }
+        },
+        {
+            "__class__": "CalefactorGas",
+            "__atributos__": {
+                "Marca": "Samsung",
+                "Modelo": "org-219",
+                "PaisF": "USA",
+                "Precio": 3800.0,
+                "FPago": "cuotas",
+                "CCuotas": 12,
+                "Promo": "no",
+                "Matricula": "UE-8241-67-10",
+                "Calorias": 3100
+            }
+        }
+    ]
+}
