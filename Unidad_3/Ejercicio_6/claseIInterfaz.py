@@ -4,9 +4,9 @@ from zope.interface import Interface
 from zope.interface import implementer
 
 class IInterfaz(Interface):
-    def insertarElemento(posicion):
+    def insertarElemento(nuevoCalefactor,pos):
         pass
-    def agregarElemento(publicacion):
+    def agregarElemento(nuevoCalefactor):
         pass
-    def mostrarElemento(posicion):
+    def mostrarElemento():
         pass
