@@ -4,7 +4,7 @@ from clasePersonal import Personal
 class PersonalApoyo(Personal):
     __categoria:int
     def __init__(self,**kwargs):
-        super().__init__(Cuil=kwargs['Cuil'],Ape=kwargs['Ape'],Nom=kwargs['Nom'],SueldoB=kwargs['SueldoB'],Antig=kwargs['Antig'],Categoria=super().__init__(Cuil=kwargs['Cuil'],Ape=kwargs['Ape'],Nom=kwargs['Nom'],SueldoB=kwargs['SueldoB'],Antig=kwargs['Antig'],Categoria=kwargs['Categoria']))
+        super().__init__(**kwargs)
         self.__categoria=kwargs['Categoria']
 
     def getCategoria(self):
