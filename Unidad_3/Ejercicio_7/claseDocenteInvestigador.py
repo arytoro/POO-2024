@@ -7,7 +7,7 @@ class DocenteInvestigador(Docente,Investigador):
     __importeExtra:float
 
     def __init__(self,**kwargs):
-        super().__init__(Cuil=kwargs['Cuil'],Ape=kwargs['Ape'],Nom=kwargs['Nom'],SueldoB=kwargs['SueldoB'],Antig=kwargs['Antig'],Carrera=kwargs['Carrera'],Cargo=kwargs['Cargo'],Catedra=kwargs['Catedra'],Area=kwargs['Area'],Tipo=kwargs['Tipo'])
+        super().__init__(**kwargs)
         self.__cateDeIncentivo=kwargs['CateI']
         self.__importeExtra=kwargs['ImpExtra']
 
