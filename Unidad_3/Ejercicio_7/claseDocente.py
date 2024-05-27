@@ -7,7 +7,7 @@ class Docente(Personal):
     __catedra:str
 
     def __init__(self,**kwargs):
-        super().__init__(Cuil=kwargs['Cuil'],Ape=kwargs['Ape'],Nom=kwargs['Nom'],SueldoB=kwargs['SueldoB'],Antig=kwargs['Antig'],Carrera=kwargs['Carrera'],Cargo=kwargs['Cargo'],Catedra=kwargs['Catedra'],Area=kwargs['Area'],Tipo=kwargs['Tipo'])
+        super().__init__(**kwargs)
         self.__carrera=kwargs['Carrera']
         self.__cargo=kwargs['Cargo']
         self.__catedra=kwargs['Catedra']
