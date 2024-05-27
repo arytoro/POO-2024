@@ -1,0 +1,181 @@
+{
+    "__class__": "Lista",
+    "agentes": [
+        {
+            "__class__": "Docente",
+            "__atributos__": {
+                "Cuil": "20-30112003-7",
+                "Ape": "Toro",
+                "Nom": "Cristian",
+                "SueldoB": 700000.0,
+                "Antig": 5,
+                "Carrera": "LSI",
+                "Cargo": "simple",
+                "Catedra": "Algoritmos y Resolucion de Problemas",
+                "PorcCargo": 10,
+                "Area": "",
+                "Tipo": ""
+            }
+        },
+        {
+            "__class__": "PersonalApoyo",
+            "__atributos__": {
+                "Cuil": "24-87654321-0",
+                "Ape": "Fernandez",
+                "Nom": "Laura",
+                "SueldoB": 300000,
+                "Antig": 6,
+                "Categoria": 17,
+                "PorcCate":20
+            }
+        },
+        {
+            "__class__": "Investigador",
+            "__atributos__": {
+                "Cuil": "21-67421746-2",
+                "Ape": "Gonzalez",
+                "Nom": "Mariano",
+                "SueldoB": 400000.0,
+                "Antig": 3,
+                "Carrera": "",
+                "Cargo": "",
+                "Catedra": "",
+                "PorcCargo": 0.0,
+                "Area": "IA",
+                "Tipo": "Analitica"
+            }
+        },
+        {
+            "__class__": "Docente",
+            "__atributos__": {
+                "Cuil": "23-54321098-7",
+                "Ape": "Gonzalez",
+                "Nom": "Carlos",
+                "SueldoB": 980000,
+                "Antig": 3,
+                "Carrera": "Medicina",
+                "Cargo": "exclusivo",
+                "Catedra": "Anatomia Humana",
+                "PorcCargo": 50,
+                "Area": "",
+                "Tipo": ""
+            }
+        },
+        {
+            "__class__": "DocenteInvestigador",
+            "__atributos__": {
+                "Cuil": "21-56234528-0",
+                "Ape": "Alvarez",
+                "Nom": "Maria",
+                "SueldoB": 560000.0,
+                "Antig": 2,
+                "Carrera": "LSI",
+                "Cargo": "exclusivo",
+                "Catedra": "Bases de Datos II",
+                "PorcCargo": 50,
+                "Area": "Bases de Datos",
+                "Tipo": "Experimental",
+                "CateI": "IV",
+                "ImpExtra": 320000.0
+            }
+        },
+        {
+            "__class__": "Investigador",
+            "__atributos__": {
+                "Cuil": "27-98765432-1",
+                "Ape": "Rodriguez",
+                "Nom": "Karen",
+                "SueldoB": 300000,
+                "Antig": 4,
+                "Carrera": "",
+                "Cargo": "",
+                "Catedra": "",
+                "PorcCargo": 0.0,
+                "Area": "Macroeconomia",
+                "Tipo": "Teorica"
+            }
+        },
+        {
+            "__class__": "DocenteInvestigador",
+            "__atributos__": {
+                "Cuil": "23-78215623-5",
+                "Ape": "Quintero",
+                "Nom": "Jorge",
+                "SueldoB": 1200000.0,
+                "Antig": 8,
+                "Carrera": "LSI",
+                "Cargo": "semiexclusivo",
+                "Catedra": "POO",
+                "PorcCargo": 20,
+                "Area": "IA",
+                "Tipo": "Analitica",
+                "CateI": "II",
+                "ImpExtra": 350000.0
+            }
+        },
+        {
+            "__class__": "Investigador",
+            "__atributos__": {
+                "Cuil": "24-12356923-5",
+                "Ape": "Olmos",
+                "Nom": "Marcos",
+                "SueldoB": 500000.0,
+                "Antig": 3,
+                "Carrera": "",
+                "Cargo": "",
+                "Catedra": "",
+                "PorcCargo": 0.0,
+                "Area": "Geologia",
+                "Tipo": "Observacional"
+            }
+        },
+        {
+            "__class__": "DocenteInvestigador",
+            "__atributos__": {
+                "Cuil": "20-12345654-9",
+                "Ape": "Robledo",
+                "Nom": "Cristina",
+                "SueldoB": 1000000,
+                "Antig": 5,
+                "Carrera": "Ingenieria en Informatica",
+                "Cargo": "simple",
+                "Catedra": "Programacion Avanzada",
+                "PorcCargo": 10,
+                "Area": "IA",
+                "Tipo": "Experimental",
+                "CateI": "III",
+                "ImpExtra": 300000.0
+            }
+        },
+        {
+            "__class__": "PersonalApoyo",
+            "__atributos__": {
+                "Cuil": "27-71237821-4",
+                "Ape": "Sanchez",
+                "Nom": "Carlos",
+                "SueldoB": 620000.0,
+                "Antig": 4,
+                "Categoria": 5,
+                "PorcCate":10
+            }
+        },
+        {
+            "__class__": "DocenteInvestigador",
+            "__atributos__": {
+                "Cuil": "20-12345678-9",
+                "Ape": "Perez",
+                "Nom": "Juan",
+                "SueldoB": 640000.0,
+                "Antig": 2,
+                "Carrera": "LSI",
+                "Cargo": "exclusivo",
+                "Catedra": "Estructura de Datos",
+                "PorcCargo": 50,
+                "Area": "Bases de Datos",
+                "Tipo": "Experimental",
+                "CateI": "IV",
+                "ImpExtra": 300000.0
+            }
+        }
+    ]
+}
