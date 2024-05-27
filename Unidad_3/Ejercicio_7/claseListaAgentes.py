@@ -156,7 +156,7 @@ class Lista:
         except IndexError:
             print("ERROR. El indice ingresado no es valido, debe variar entre 0 y",self.__getTope()-1)
 
-    def __ordenarLista_PorCriterio(self,criterio):
+    def ordenarLista_PorCriterio(self,criterio):
         #Ordena la lista enlazada en funcion del atributo recibido por 'criterio'.
         #En el ordenamiento de abajo se utiliza el ordenamiento por burbuja mejorado
         cota=None
@@ -185,14 +185,18 @@ class Lista:
                 actual=actual.getSiguiente()
             cota=k.getSiguiente()
         print("Lista ordenada exitosamente!")
-
+        
     def listarDocentesInvestigadores_PorCarrera(self,xcarre):
-        self.__ordenarLista_PorCriterio('Nombre') #Aqui especifico que el criterio para el ordenamiento sea a traves del nombre del agente
         band=False
+        sublista=Lista() #En esta sublista cargare los Docentes Investigadores de la carrera especificada
         for unagente in self:
             if isinstance(unagente,DocenteInvestigador) and unagente.getCarrera().strip().lower()==xcarre:
-                print(unagente)
+                sublista.agregarElemento(unagente) 
                 band=True
+        sublista.ordenarLista_PorCriterio('Nombre') #Una vez cargada, especifico que el criterio para ordenarla es a través del nombre del agente
+        for unagente in sublista: #Ya ordenada, recorro la sublista mostrado sus agentes
+            print(unagente)
+
         if band is False:
             print("No existen Docentes Investigadores que dicten esa carrera")
 
@@ -207,9 +211,13 @@ class Lista:
         print(f"Cantidad de Docentes Investigadores: {cont1}\nCantidad de Investigadores: {cont2}")
 
     def listarAgentes_OrdenadosPorApellido(self):
-        self.__ordenarLista_PorCriterio("Apellido")#Aqui especifico que el criterio para el ordenamiento sea a traves del apellido del agente
         tipo=None
+        sublista=Lista() #En esta sublista cargare todos los agentes de la lista actual para luego ordenarlos por apellido
         for unagente in self:
+            sublista.agregarElemento(unagente)
+        sublista.ordenarLista_PorCriterio('Apellido')#Aqui especifico que el criterio para el ordenamiento sea a traves del apellido del agente
+
+        for unagente in sublista: #Recorro la sublista ordenada
             if isinstance(unagente,DocenteInvestigador):
                 tipo='Docente Investigador'
             elif isinstance(unagente,Docente):
