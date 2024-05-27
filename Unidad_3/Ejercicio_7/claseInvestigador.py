@@ -6,7 +6,7 @@ class Investigador(Personal):
     __tipo:str
 
     def __init__(self,**kwargs):
-        super().__init__(Cuil=kwargs['Cuil'],Ape=kwargs['Ape'],Nom=kwargs['Nom'],SueldoB=kwargs['SueldoB'],Antig=kwargs['Antig'],Carrera=kwargs['Carrera'],Cargo=kwargs['Cargo'],Catedra=kwargs['Catedra'],Area=kwargs['Area'],Tipo=kwargs['Tipo'])
+        super().__init__(**kwargs)
         self.__area=kwargs['Area']
         self.__tipo=kwargs['Tipo']
 
