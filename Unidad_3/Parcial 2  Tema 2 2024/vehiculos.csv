@@ -1,0 +1,11 @@
+tipo;marca;modelo;aniofabri;cappasaj;nroplazas;distancia;tarifabase;tiposerv;turno
+A;Mercedes-Benz;OC 500;2022;66;11;250.135;360000;turismo;mañana
+V;Hyundai;Staria;2023;10;7;110.400;120000;minivan;
+A;Scania;K400;2020;58;10;195.900;320000;interurbano;tarde
+V;Toyota;Hiace;2023;8;7;130.500;125000;minivan;
+V;Mercedes-Benz;Sprinter;2024;18;7;130;150000;van;
+A;Scania;K360;2019;58;10;155.360;320000;interurbano;noche
+A;Mercedes-Benz;OF 1721;2021;60;9;130;340000;turismo;noche
+V;Ford;Transit;2023;16;8;125.550;160000;van;
+V;Kia;Carnival;2024;10;9;144.600;118000;minivan;
+A;Volvo;Piso elevado 15 Mts;2024;58;10;250.800;330000;turismo;mañana
