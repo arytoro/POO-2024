@@ -3,10 +3,10 @@ from claseAutobus import Autobus
 from claseVan import Van
 
 class GestorVehiculos:
-    __listaVehiculos=[]
+    __listaVehiculos:list
 
     def __init__(self):
-        self.__listaVehiculos:list
+        self.__listaVehiculos=[]
 
     def agregarVehiculo(self,unvehiculo):
         self.__listaVehiculos.append(unvehiculo)
