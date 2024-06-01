@@ -6,7 +6,7 @@ class GestorVehiculos:
     __listaVehiculos=[]
 
     def __init__(self):
-        self.__listaVehiculos=[]
+        self.__listaVehiculos:list
 
     def agregarVehiculo(self,unvehiculo):
         self.__listaVehiculos.append(unvehiculo)
