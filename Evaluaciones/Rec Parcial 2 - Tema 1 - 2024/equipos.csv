@@ -1,0 +1,12 @@
+tipo;marca;modelo;anio;combustible;potencia;capacidadcarga;alquilerdiario;diasalquiler;tipomaquina;peso;alimentacion
+M;Caterpillar;CAT 336FL;2021;Diesel;320HP;30;5000;30;Excavadora;40
+E;DeWalt;DCE100B;2022;N/A;120w;N/A;900;7;bateria
+M;John Deere;460E;2022;Diesel;335HP;40;6000;35;Cargadora Frontal;48
+M;Hyundai;HL940A;2020;Diesel;190HP;25;4500;25;Minicargadora;30
+E;Makita;XDT15Z;2022;N/A;18w;N/A;550;9;bateria
+E;Bosch;GBH2-28DFV;2021;N/A;800w;N/A;600;10;cable
+M;Liebherr;LTM 1200-5.1;2019;Diesel;480HP;200;10000;50;Grua;120
+E;Milwaukee;2767-20;2023;N/A;18w;N/A;650;12;bateria
+M;Komatsu;PC210-10;2019;Diesel;168HP;20;4000;20;Excavadora;25
+E;Hilti;TE 2-A22;2021;N/A;36w;N/A;750;14;bateria
+M;Caterpillar;D9T;2021;Diesel;410HP;60;7000;40;Bulldozer;55
