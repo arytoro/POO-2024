@@ -51,8 +51,10 @@ class Lista:
     def mostrarTipoCliente(self,xindice):
         if xindice < self.__tope:
             aux=self.__comienzo
-            for i in range(xindice):
+            i=0
+            while i<xindice:
                 aux=aux.getSiguiente()
+                i+=1
             if isinstance(aux.getCliente(),ClienteNacional):
                 print("El cliente de dicha posicion es de la clase Cliente Nacional")
             elif isinstance(aux.getCliente(),ClienteLocal):
