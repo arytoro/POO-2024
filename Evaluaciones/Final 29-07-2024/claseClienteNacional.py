@@ -3,7 +3,7 @@ from claseClienteLocal import ClienteLocal
 class ClienteNacional(ClienteLocal):
     __provincia:str
     __localidad:str
-    __codigoPostal:str
+    __codigoPostal:int
 
     def __init__(self,nombre,apellido,email,contrasenia,direccionPostal,telefono,provincia,localidad,codigoPostal):
         super().__init__(nombre,apellido,email,contrasenia,direccionPostal,telefono)
