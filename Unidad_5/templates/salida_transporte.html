@@ -1,0 +1,33 @@
+{% extends "base_template.html" %}
+{% block title %}Sucursales{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+<div class="cuerpo">
+ <h2>Selecciona la Sucursal Destino</h2>
+    <form action = "{{ request.path }}" method = "post">
+      <table>
+         <thead>
+            <tr>
+               <th>Numero de Sucursal</th>
+               <th>Provincia</th>  
+               <th>Localidad</th>              
+            </tr>
+         </thead>
+         <input type='radio' name='sucursal_destino' value='' checked style='display:none'>
+         <tbody>
+            {% for sucursal in sucursales %}
+               <tr>
+                <label>
+                  <td><input type='radio' name='sucursal_destino' value='{{sucursal.id}}'>{{ sucursal.numero }}</td>
+                  <td>{{ sucursal.provincia }}</td>
+				  <td>{{ sucursal.localidad }}</td>
+                </label>
+               </tr>
+            {% endfor %}
+         </tbody>
+        </table>
+        <input type = "submit" value = "Continuar" />
+    </form>
+      <br><br>
+      </div>
+{% endblock %}

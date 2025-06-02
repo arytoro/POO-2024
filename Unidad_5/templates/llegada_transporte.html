@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+{% block title %}Llegada de Transporte{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+ <div class="cuerpo">
+  <h2>Selecciona el paquete que ha llegado</h2>
+   <form action = "{{ request.path }}" method = "post">
+     <table>
+        <thead>
+           <tr>
+              <th>Numero de Transporte</th>
+              <th>Fecha y Hora de Salida</th>                
+           </tr>
+        </thead>
+        <input type='radio' name='transporte_elegido' value='' checked style='display:none'>
+        <tbody>
+          {% for transporte in transportes %}
+          <tr>
+            <label>
+              <td><input type='radio' name='transporte_elegido' value='{{transporte.id}}'>{{ transporte.numerotransporte}}</td>
+              <td>{{ transporte.fechahorasalida }}</td>
+            </label>
+           </tr>
+          {% endfor %}
+         </tbody>
+      </table>
+      <input type = "submit" value = "Registrar Llegada" />
+  </form>
+    <br><br>
+    </div>
+{% endblock %}

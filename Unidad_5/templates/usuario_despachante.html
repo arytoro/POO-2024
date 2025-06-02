@@ -1,0 +1,27 @@
+{% extends "base_template.html" %}
+{% block title %}Sucursales{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+      <div class="cuerpo">
+         <h2>Selecciona la Sucursal a Operar</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Numero de Sucursal</th>
+               <th>Provincia</th>  
+               <th>Localidad</th>              
+            </tr>
+         </thead>
+         <tbody>
+            {% for sucursal in sucursales %}
+               <tr>
+                  <td><a href = "{{ url_for('acciones_despachante',sucuOpe=sucursal.id) }}"> {{sucursal.numero}} </a></td>
+                  <td> {{sucursal.provincia}} </a></td>
+				      <td> {{sucursal.localidad}} </a></td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      <br><br>
+      </div>
+{% endblock %}

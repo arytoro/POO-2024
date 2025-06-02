@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+    <title>LogiPack by Toro Cristian</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="icon" href="static\img\Logo1.jpeg" type="image/x-icon">
+  </head>   
+   <body>
+   <div class='header'>
+	 <h1> Paquetes LogiPack</h1>
+   </div>
+   <div class='cuerpo'>
+      <h2> Seleccionar Usuario </h2>
+	 <ul>
+	    <li> <a href = "{{ url_for('usuario_despachante') }}"> Acceder como Despachante </a></li><br>
+       <li> <a href = "{{ url_for('inicio') }}"> Acceder como Repartidor </a></li><br>
+	</ul>
+   </div>
+   <div class="pie">
+      <p>Hecho por Ary Toro</p>
+   </div>
+   </body>
+</html>

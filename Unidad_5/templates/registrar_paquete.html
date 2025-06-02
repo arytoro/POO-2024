@@ -1,0 +1,22 @@
+{% extends "base_template.html" %}
+{% block title %}Registrar Paquete{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+<div class='cuerpo'>
+     <h2>Registro de Paquete</h2>
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "peso">Peso del Paquete</label><br>
+         <input type = "text" name = "peso" placeholder = "Ingresa el peso" /><br>
+		 
+         <label for = "nombre">Nombre del Destinatario</label><br>
+         <input type = "text" name = "nombre" placeholder = "Ingresa el nombre"/><br>
+		 
+         <label for = "direccion">Direccion del Destinatario</label><br>
+         <input type = "text" name = "direccion" placeholder = "Ingresa la direccion"/><br>
+
+		 <br>
+         <input type = "submit" value = "Registrar Paquete" />
+		  
+      </form>
+   </div>
+{% endblock %}

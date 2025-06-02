@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for("static", filename="img/Logo1.jpeg") }}" type="image/x-icon">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/estilos.css") }}">
+</head>
+<body>
+    {% block head%}{% endblock %}
+    <div class="header">
+      <h1> Paquetes LogiPack</h1>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="pie">
+      <div class='boton'>
+			<br><br><a href = "{{ url_for('inicio') }}" > Inicio </a><br><br>
+      </div>
+	  </div>	
+</body>
+</html>

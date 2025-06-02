@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block title %}Paquetes Pendientes{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+ <div class="cuerpo">
+  <h2>Selecciona Paquetes para la Salida</h2>
+   <form action = "{{ request.path }}" method = "post">
+     <table>
+        <thead>
+           <tr>
+              <th>Numero de Envio</th>
+              <th>Direccion Destinatario</th>                
+           </tr>
+        </thead>
+        <tbody>
+          {% for paquete in paquetes %}
+          <tr>
+            <label>
+              <td><input type='checkbox' name='paquetes_elegidos' value='{{paquete.id}}'>{{ paquete.numeroenvio}}</td>
+              <td>{{ paquete.dirdestinatario }}</td>
+            </label>
+           </tr>
+          {% endfor %}
+         </tbody>
+      </table>
+      <input type = "submit" value = "Registrar Salida" />
+  </form>
+    <br><br>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+{% block title %}Acciones{% endblock %}
+{% block header%}{% endblock %}
+{% block content %}
+<div class='cuerpo'>
+    <h2>Que accion deseas realizar </h2>
+    <ul>
+    <li> <a href = "{{ url_for('registrar_paquete',sucuOpe=sucursal) }}"> Registrar Paquetes </a></li><br>
+    <li> <a href = "{{ url_for('salida_paquete',sucuOpe=sucursal) }}"> Salida de Transporte </a></li><br>
+    <li> <a href = "{{ url_for('llegada_transporte',sucuOpe=sucursal) }}"> Llegada de Transporte </a></li><br>
+    </ul>
+</div>
+{% endblock %}
