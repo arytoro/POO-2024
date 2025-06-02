@@ -1,0 +1,86 @@
+{
+    "__class__": "GestorJugadores",
+    "jugadores": [
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Ary",
+                "Puntaje": 6,
+                "Fecha": "14/06/2024",
+                "Hora": "23:37:47"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Cristian",
+                "Puntaje": 4,
+                "Fecha": "14/06/2024",
+                "Hora": "23:19:56"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Boby",
+                "Puntaje": 3,
+                "Fecha": "14/06/2024",
+                "Hora": "23:39:41"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Lucho21",
+                "Puntaje": 3,
+                "Fecha": "24/06/2024",
+                "Hora": "00:43:08"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Hasw",
+                "Puntaje": 3,
+                "Fecha": "24/06/2024",
+                "Hora": "00:55:02"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Hoal12",
+                "Puntaje": 2,
+                "Fecha": "24/06/2024",
+                "Hora": "10:06:28"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Maquina",
+                "Puntaje": 0,
+                "Fecha": "15/06/2024",
+                "Hora": "13:38:04"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "Marcelo",
+                "Puntaje": 3,
+                "Fecha": "24/06/2024",
+                "Hora": "17:31:25"
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "Nombre": "JAN",
+                "Puntaje": 7,
+                "Fecha": "24/06/2024",
+                "Hora": "17:33:03"
+            }
+        }
+    ]
+}
