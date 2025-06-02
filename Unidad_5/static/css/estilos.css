@@ -1,0 +1,139 @@
+/* Estilos para el encabezado */
+.header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  /* Estilos para el cuerpo */
+  .cuerpo {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  .cuerpo h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .cuerpo ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cuerpo li {
+    margin-bottom: 10px;
+  }
+  
+  .cuerpo a {
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  .cuerpo a:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para el pie de página */
+  .pie {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  table a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Estilos para el pie de página */
+  
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .boton a {
+    background-color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  .boton a:hover {
+    background-color: #807878; /* Cambia el color de fondo al pasar el cursor */
+  }
+  
+  .boton a:focus {
+    outline: 2px solid blue; /* Marca un recuadro alrededor del botón */
+  }
+  
+  .icono {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+  }
